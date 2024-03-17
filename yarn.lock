@@ -4949,11 +4949,6 @@
     pino-pretty "9.4.0"
     thor-devkit "^2.0.6"
 
-"@vechain/hardhat-web3@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@vechain/hardhat-web3/-/hardhat-web3-0.0.4.tgz#9159be69b648d7f7c0f61d05c89b35da9e1a0927"
-  integrity sha512-I11LHB3wPchTdkqE0tI2TE2gE+TLJlAV2rPmCTnTSY33678knnKLw4e0BU6KA15tsKr+tNBtZP6kIptwBJUgSw==
-
 "@vechain/picasso@2.1.1", "@vechain/picasso@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@vechain/picasso/-/picasso-2.1.1.tgz#a0adc594a3ce5047c606e7745566a65f341671fb"

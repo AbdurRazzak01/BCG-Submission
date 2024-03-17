@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Calculate Reward Points</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Dark shade */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Dark shade */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 40%;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .profile {
+            width: 40%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+       
+        .wallet {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #54585c;
+            border-radius: 5px;
+        }
+        .logo {
+            max-width: 80px; /* Adjusted smaller logo size */
+        }
+       
+
+        .profile img {
+            width: 280px; /* Adjust the width as needed */
+            height: 360px; /* Maintain aspect ratio */
+            border-radius: 0; /* Make the image circular */
+            margin-bottom: 15px; /* Add some spacing */
+        }
+
+        .info {
+            width: 40%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/logo/Zenvolt (2).png" alt="Logo" class="logo">
+        </div>
+        <div class="wallet">
+            <a href="./index.html" class="wallet">Home</a>
+        </div>
+    </header>
+
+
+    <main>
+       
+        <div class="info">
+           
+            <h3>Total Destination: 500 miles</h3>
+            <h3>Total reward Earned: 200<h3> 
+            <h3> Reward Equivalent to: £20! </h3>
+            <h3> Your efficiency: </h3>
+
+            <!-- Placeholder for the image -->
+                <img src="images/Piechart.jpg" alt="Image Description">
+            
+        </div>
+    
+            <form id="rewardForm">
+                <label for="Distance">Distance (in km):</label><br>
+                <input type="number" id="Distance" name="Distance" required><br><br>
+        
+                <label for="Efficiency">Efficiency (in km/litre):</label><br>
+                <input type="number" id="Efficiency" name="Efficiency" required><br><br>
+        
+                <button type="submit">Calculate</button>
+            </form>
+        
+            <div class="profile">
+                <img src="/images/ProfilePic.jpg" alt="Profile Picture">
+                <h2>User Name: Mark Webb</h2>
+                <p>Car Number: UK_ABC 123</p>
+                <div id="result"></div> <!-- Display the calculation result here -->
+            </div>
+        </main>
+        
+        <script>
+            // Add event listener for form submission
+            document.getElementById('rewardForm').addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                const distance = document.getElementById('Distance').value;
+                const efficiency = document.getElementById('Efficiency').value;
+        
+                try {
+                    const response = await fetch('/calculate-reward', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ distance, efficiency })
+                    });
+        
+                    if (!response.ok) {
+                        throw new Error('Failed to calculate reward points');
+                    }
+        
+                    const data = await response.json();
+                    document.getElementById('result').innerText = `Reward Points: ${data.rewardPoints}`;
+                } catch (error) {
+                    console.error(error);
+                    document.getElementById('result').innerText = 'Error calculating reward points';
+                }
+            });
+        </script>
+        
+
+    <footer>
+        <p>&copy; @ 2024 ZenVault. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Your JavaScript code goes here
+    </script>
+</body>
+</html>

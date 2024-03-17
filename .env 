@@ -1,0 +1,4 @@
+REACT_APP_PUBLIC_PROJECT_ID=39bc...
+REACT_APP_RELAY_URL=wss://relay.walletconnect.com
+WALLET_CONNECT_DEBUGGER=true
+REACT_APP_PUBLIC_PROJECT_ID=your_project_id_here

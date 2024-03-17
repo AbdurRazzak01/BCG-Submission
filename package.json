@@ -44,8 +44,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "yarn && yarn contract:compile && yarn react-app-rewired start",
-    "build": "yarn && yarn contract:compile && yarn react-app-rewired build",
+    "start": "yarn react-app-rewired start",
+    "build": "yarn && yarn react-app-rewired build",
     "test": "yarn && yarn contract:compile && yarn react-app-rewired test",
     "eject": "yarn react-app-rewired eject",
     "contract:compile": "yarn hardhat compile",

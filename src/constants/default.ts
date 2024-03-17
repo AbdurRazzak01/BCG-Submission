@@ -5,7 +5,7 @@ if (!process.env.REACT_APP_PUBLIC_PROJECT_ID)
 
 export const WC_PROJECT_ID = process.env.REACT_APP_PUBLIC_PROJECT_ID
 
-console.log("DEFAULT_PROJECT_ID", WC_PROJECT_ID)
+console.log("REACT_APP_PUBLIC_PROJECT_ID", WC_PROJECT_ID)
 
 // If undefined will use the Wallet Connect default
 export const WC_RELAY_URL =

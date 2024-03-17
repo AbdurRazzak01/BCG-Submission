@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+</html>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta
-            content="Vechain Demo Dapp"
-            name="description"
-    />
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="%PUBLIC_URL%/manifest.json" rel="manifest"/>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta content="ZenVault Dapp" name="description"/>
+    <title>Welcome to ZenVault </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("images/Zen.jpeg"); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Dark shade */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            max-width: 80px; /* Adjusted smaller logo size */
+        }
+        .wallet {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #404245;
+            border-radius: 5px;
+        }
+        .container {
+        display: flex;
+        }
+    
+        .box {
+        flex: 1;
+        margin: 10px;
+       }
+       
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Dark shade */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: rgb(75, 70, 70);
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+        }
+        main h1 {
+        font-size: 2.5em; /* Adjust the font size as needed */
+        color: rgb(197, 168, 5); /* Darker color */
+        background-color: #404245;
+         margin-top: 60px; /* Adjust the margin-top to lower the position */
+       }
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>VeChain DApp</title>
+    </style>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root"></div>
-<!--
-  This HTML file is a template.
-  If you open it directly in the browser, you will see an empty page.
+    <header>
+        <div>
+            <img src="images/logo/Zenvolt (2).png" alt="Logo" class="logo">
+        </div>
+        <div class="wallet">
+            <a href="./profilePage.html" class="wallet">Sign in Your Profile</a>
+        </div>
+    </header>
+  
+    
+    <main>
+        <h1>Drive Tomorrow with ZenVault!</h1>
 
-  You can add webfonts, meta tags, or analytics to this file.
-  The build step will place the bundled scripts into the <body> tag.
+    </main>
+    <div class="container">
+        <div class="box">
+            <form>
+                <label for="address">Contract Address:</label><br>
+                <input type="text" id="address" name="address" required><br><br>
+        
+                <label for="amount">Amount:</label><br>
+                <input type="text" id="amount" name="amount" required><br><br>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="box">
+            <h3>Your Wallet</h3>
+            <a href="0xdC89E361B206dCFb378ed7BC7Ba933Bb141f5C6F" class="wallet">Check Your Wallet</a>
+        </div>
+    </div>
 
-  To begin the development, run `npm start` or `yarn start`.
-  To create a production bundle, use `npm run build` or `yarn build`.
--->
+    <footer>
+        <p>&copy; 2024 ZenVault. All rights reserved.</p>
+   
+    </footer>
+    <script>
+        const images = [
+        "/images/Zen.jpeg",
+        "/images/car.jpg"
+       
+
+        ];
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Change background image every 5 seconds
+        setInterval(changeBackgroundImage, 5000);
+    </script>
 </body>
 </html>
