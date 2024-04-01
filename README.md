@@ -1,7 +1,7 @@
 # ZenVolt dApp
 •	Short summary: Offers last mile mobility firms like Uber a way to reach NetZero by incentivizing drivers to adopt sustainable vehicles with our reward app ZenVolt
 
-*** We hjave used Vechains' VeWorld dApp as a base/foundation of inspire 
+*** We have used Vechains' VeWorld dApp as a base/foundation of inspiration 
 
 •	Full description:
 
